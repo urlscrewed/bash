@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#Script Title Color
+
+echo -e "\e[1mTitle\e[0m"
+
+# \e[8m = Hidden
+# \e = ESC Charater to allow text modification
+# [1m = Bold
+# \e[0m = Resets the text format
+
+echo -e "\033[1;32mBold and Color \033[m"
+
+# Fade cool for banners: for every symbol behind 'm' 16 --> 21 goes dark to light then 21 -->16 light to dark modification needed to stretch full screen and not good for phrases.
+
+for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}m###\e[0m" ; done ; echo 
+
+#Trying it with phrases
+
+for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}mTESTBANNERFADE\e[0m" ; done ; echo
+
+# Banner wth background color the space is the back ground 
+
+for i in {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} ; do echo -en "\e[48;5;${i}m \e[0m" ; done ; echo
+
+# I like this one so I will repeat it and see what the fuck happens Why not use a fuckin while bc who really gives 2 fucks 
+

@@ -1,0 +1,52 @@
+#!/bin/bash
+
+#Synopsis: What do you think this fucking thing is for FREEDOM well not real freedm if you have: cancer, courtcase, live in society, child support, any custody of a kid, fucked and impregnated a bi polar, small dick. huge pussy, money problems, religon of any kind, never had and abortion, eaten any food that you did not grow etc etc 
+
+
+for i in {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} {16..21} {21..16} ; do echo -en "\e[48;5;${i}m \e[0m" ; done ; echo
+
+echo -e "\033[1;29mWritten by the last straight man on earth, with the help of the internat QUESTION!! why take credit for hacky shit \033[m"
+
+hexchars="0123456789ABCDEF"
+
+end=$( for i in {1..6} ; do echo -n ${hexchars:$(( $RANDOM % 16 )):1} ; done | sed -e 's/\(..\)/:\1/g' )
+
+buttalwayslast=00:00:0C$end
+
+echo -e "\033[1;32mGofuckYourSelf:Now you see the fucking thing:\033[m"
+
+ip link show eth0 | awk '/ether/ {print $2}'
+
+sleep 2
+
+ifconfig eth0 down
+
+sleep 1
+
+ifconfig eth0 hw ether $buttalwayslast
+
+sleep 1
+
+ifconfig eth0 up
+
+sleep 1
+
+echo -e "\033[1;32mGofuckYourSelf: Now look super close at the fucking number ... \033[m"
+
+hairyballs=$butalwayslasts
+
+ip link show eth0 | awk '/ether/ {print $2}'
+
+echo -e "\033[1;32mGofuckYourSelf: The fucking thing has changed Whippy do and fuck you to\033[m"
+
+#echo -e "\033[1;32mGofuckYourSelf: Do you want to make this  permanant?  Yay or Nay:  \033[m"\n
+
+#read fuck
+
+#if [$fuck==yay]; the
+
+#rm -f /etc/network/interfaces && echo "# This file describes the network interfaces available on your system\n # and how to activate them. For more information, see interfaces(5).\n source /etc/network/interfaces.d/*\n # The loopback network interface\n auto lo\n iface lo inet loopback\n $buttalwayslast" > /etc/network/interfaces
+
+
+
+

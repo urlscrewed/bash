@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Time Date and who is logged in
+#ech0 -n is entering the text string on the same line as the user output
+
+echo "Kernal Command Time and Date Is: "
+echo "------------------------------------"
+
+date
+
+echo "Who is Logged In"
+echo "----------------"
+
+who
+
+echo "Host, User, Bash_Version"
+echo "------------------------"
+
+echo Bash Version:$BASH_VERSION
+
+echo UID:$UID
+
+echo HOME:$HOME

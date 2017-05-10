@@ -1,0 +1,71 @@
+#!/bin/bash
+
+# Text color variables
+
+# Determine Time-Sync kernal / Software 
+
+./timedatev
+
+echo "Checking BIOS Clock"
+
+hwclock
+
+echo "Checking Software Clock Kernal Time"
+
+date
+
+#$USER INteraction: Do you want to Query out side the network to Google **** Exposure *****
+
+echo "Nearest Google Server States The Time and Date Is:"
+
+date -d "$(curl -s --head http://google.com | grep ^Date: | sed 's/Date: //g')"
+
+#verify if ntp is up ntpstat
+
+#$USER Interaction Start NTP Server to verify time witout side source ex NIST *** Exposure ***
+
+#sysctrl start ntp if ER only!! ** Exposure **
+
+#nc time.nist.gov 13
+
+read -p "Would you like to Sync time to the nearest Google Sever? yes/no: " googletime
+
+if [[ $googletime == "yes" || $googletime == "Yes" ]]; then
+
+	echo "Running Sync"
+
+
+#Adding a progress bar: while true; do for X in '-' '/' '|' '\'; do echo -en "\b$X"; sleep 0.1; done; done
+
+#Running Sync With Mac Down / Proxy on to limit
+
+date -s "$(curl -s --head http://google.com | grep ^Date: | sed 's/Date: //g')"
+
+elif [[ $googletime == "no" || $googletime == "No" ]]; then
+
+	local answer == "no"
+
+	echo "Agree Exposure IS NOTA GOOD THING"
+	read -p "Should we continue Further Resolution if needed? yes/no: " googletime2
+
+elif [[ $googletime2 == "yes"  || $googletime2 == "Yes" ]]; then
+
+	read -p "Do you need to change TZ info? yes/no: "
+
+elif [[ $answer == "yes" || $answer == "y" || $answer == "Y" || $answer == "Yes" || $answer == "YeS" ]]; then
+
+	echo "Please Choose Options: yes/no: "
+
+tzselect
+
+elif [[ $answer == "no" || $answer == "n" || $answer == "No" || $answer == "NO" || $answer == "nO" ]]; then
+
+date = date2
+
+# Anyother else statement following an elif will be considered under the last elif
+
+else
+
+	echo "Good to know the date: $date2 is correct on this system"
+
+fi
